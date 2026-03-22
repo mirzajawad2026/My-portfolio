@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
 *{
 margin: 0;
@@ -71,6 +70,7 @@ overflow-x: hidden;
 width: var(--size-10);
 height: var(--size-10);
 background: linear-gradient(135deg, #0b0f19, #111827, #1f2937);
+overflow-x: hidden;
 }
 /* nav bars */
 .nav-section{
@@ -117,6 +117,11 @@ background: linear-gradient(#111, #111) padding-box,
 linear-gradient(120deg, red, blue, rgb(2, 139, 66), red) border-box;
 background-size: 300% 300%;
 animation: borderMove 4s linear infinite;
+  transition: transform 0.4s ease; /* smooth animation */
+}
+.home-img:hover{
+  transform: scale(1.1); /* zoom effect */
+
 }
 @keyframes borderMove {
   0% { background-position: 0% 50%; }
@@ -173,10 +178,10 @@ margin-top: 50px;
 .about-img{
 width: 500px;
 height: 520px;
-border: 5px solid transparent;
 border-radius: 12px;
 background: linear-gradient(#111, #111) padding-box,
 linear-gradient(120deg, red, blue, purple, red) border-box;
+border: 3px solid transparent;
 background-size: 300% 300%;
 animation: borderMove 4s linear infinite;
 }
@@ -188,6 +193,7 @@ font-size: 20px;
 letter-spacing: 1px;
 word-spacing: 1px;
 padding: 20px;
+text-align: center;
 border-radius: 12px;
 border: 3px solid transparent;
 background: linear-gradient(#111, #111) padding-box,
@@ -454,31 +460,241 @@ font-weight: 500;
   filter: brightness(1.2);
 }
 
-/* SECTION */
-.contact-section {
-  padding: 90px 20px;
+#contact {
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  /* justify-content: left; */
+  /* background: linear-gradient(135deg, #0f0f0f, #1a0000); */
+  font-family: 'Poppins', sans-serif;
 }
 
-/* TITLE */
-.contact-title {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 40px;
-
-  background: linear-gradient(90deg, #ff3c3c, #4da3ff, #9b5cff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: glow 3s infinite alternate;
+.contact-container {
+  width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 40px rgb(28, 47, 104);
+  text-align: center;
+  color: white;
+  transition: 0.4s;
 }
 
-@keyframes glow {
-  0% { filter: drop-shadow(0 0 6px #ff3c3c); }
-  100% { filter: drop-shadow(0 0 18px #4da3ff); }
+.contact-container:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 60px rgba(36, 21, 165, 0);
 }
 
+.contact-container h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
 
+.contact-container p {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* Input Fields */
+.input-box {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid #555;
+  color: white;
+  font-size: 14px;
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #aaa;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+  top: -10px;
+  font-size: 12px;
+  color: red;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: linear-gradient(45deg, red, black);
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff0000, #330000);
+}
+
+/* Status Message */
+#status {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+}
+#contact-main-section{
+display:flex;
+justify-content: space-around;
+align-items: center;
+}
+#info-section{
+width: 400px;
+height: 500px;
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 40px rgb(28, 47, 104);
+  text-align: center;
+  color: white;
+  transition: 0.4s;
+}
+
+#info-section:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 60px rgba(36, 21, 165, 0);
+}
+
+#info-section h2{
+font-size: 40px;
+font-weight: 900;
+letter-spacing: .5px;
+text-align: left;
+padding:10px;
+width: auto;
+background: linear-gradient(to right, red, blue);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color: transparent;
+position: relative;
+bottom:20px;
+}
+#info-section h4{
+text-align: left;
+word-spacing: 1px;
+letter-spacing: 1px;
+font-size: 30px;
+margin-top: 10px;
+}
+#info-section p{
+text-align:left;
+position: relative;
+bottom: 15px;
+line-height: 5px;
+}
+#info-section .mail{
+position:relative;
+top:1.5px;
+}
+#info-section .italic-wrt{
+text-align: left;
+word-spacing: 1px;
+letter-spacing: 1px;
+position: relative;
+top:20px;
+}
+#info-section h3{
+position: relative;
+top:50px;
+text-align: left;
+padding-top: 10px;
+padding-left: 10px;
+font-size: 30px;
+}
+#info-section a{
+position: relative;
+top: 90px;
+font-size: 50px;
+}
+.footer-section{
+width:100%;
+height:70px;
+display:flex;
+justify-content: space-around;
+border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-section div{
+margin-top:15px;
+}
+h1{
+text-align:center;
+background: linear-gradient(to right, red, blue);
+background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+color:transparent;
+}
+/* ================= NAVBAR LINKS ================= */
+.right-nav nav {
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ===== SCALE EFFECT ===== */
+.right-nav nav:hover {
+  transform: scale(1.1);
+  color: red;
+}
+
+/* ===== BOTTOM BORDER ANIMATION ===== */
+.right-nav nav::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, red, blue);
+  transition: all 0.4s ease;
+  transform: translateX(-50%);
+}
+
+/* ===== HOVER EFFECT ===== */
+.right-nav nav:hover::after {
+  width: 100%;
+}
+
+/* ===== ACTIVE CLICK EFFECT ===== */
+.right-nav nav:active {
+  transform: scale(0.95);
+}
+/* hidden state */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+/* visible state */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
