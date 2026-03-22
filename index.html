@@ -20,17 +20,18 @@
             <div class="left-nav">
                 <nav>Mirza Jawad</nav>
             </div>
+ 
             <div class="right-nav">
-                <nav><i class="fa-solid fa-house fa-fade fa-s"></i>Home</nav>
-                <nav><i class="fa-solid fa-circle-info fa-fade"></i>About</nav>
-                <nav><i class="fa-solid fa-gear fa-fade"></i>Skills</nav>
-                <nav><i class="fa-solid fa-briefcase fa-fade"></i>Projects</nav>
-                <nav><i class="fa-solid fa-phone fa-fade"></i>contact</nav>
-            </div>
+    <nav data-target="home"><i class="fa-solid fa-house fa-fade fa-s"></i>Home</nav>
+    <nav data-target="about"><i class="fa-solid fa-circle-info fa-fade"></i>About</nav>
+    <nav data-target="skills"><i class="fa-solid fa-gear fa-fade"></i>Skills</nav>
+    <nav data-target="projects"><i class="fa-solid fa-briefcase fa-fade"></i>Projects</nav>
+    <nav data-target="contact"><i class="fa-solid fa-phone fa-fade"></i>contact</nav>
+</div>
         </div>
     </div>
     <!-- Home section -->
-    <div class="home-section">
+    <div class="home-section reveal">
         <div id="home-img">
             <img src="download (8).jpg" alt="" class="home-img">
         </div>
@@ -53,7 +54,7 @@
 
     <!-- about section -->
     <h2 class="about-H2">About</h2>
-    <div class="about-section">
+    <div class="about-section reveal">
         <div class="about-img">
             <img src="download (8).jpg" alt="about-img" class="about-img">
         </div>
@@ -76,7 +77,7 @@
     <div class="skills-section">
         <h2>My Skills</h2>
 
-        <div class="skills-container">
+        <div class="skills-container reveal">
             <button class="skill">
                 <img src="download.png" alt="">
                 <span>HTML</span>
@@ -119,23 +120,80 @@
             continue improving my skills while having fun in the process.</p>
     </div>
 <!-- Proe\jects -->
-<section class="projects-section">
+<section class="projects-section reveal">
   <h2 class="title">🚀 My Projects</h2>
 
   <div id="projects" class="projects-grid"></div>
 </section>
-<!-- canract section -->
-
-
-  </form>
 </section>
+<!--  -->
+<h1>Contact information</h1>
+<div id="contact-main-section">
+<section id="contact">
+  <div class="contact-container">
+    <h2>Contact Me</h2>
+    <p>Let’s build something amazing together 🚀</p>
+
+    <form id="contact-form">
+      <div class="input-box">
+        <input type="text" name="user_name" required>
+        <label>Your Name</label>
+      </div>
+
+      <div class="input-box">
+        <input type="email" name="user_email" required>
+        <label>Your Email</label>
+      </div>
+
+      <div class="input-box">
+        <textarea name="message" rows="5" required></textarea>
+        <label>Your Message</label>
+      </div>
+
+      <button type="submit">Send Message ✉️</button>
+      <span id="status"></span>
+    </form>
+  </div>
+</section>
+
+
+<!-- Info section -->
+<section id="info-section">
+    <h2>Info</h2>
+    <p><i class="fa-solid fa-phone fa-beat"></i> : +923075106313</p>
+    
+    <p class="mail"><i class="fa-solid fa-message fa-beat"></i> : mirzajawad2026@gmail.com</p>
+        <h4>Let's build something together</h4>
+        <i class="italic-wrt">If you have any questions or would like to collaborate, feel free <br> to contact me.</i>
+        <h3><i class="fa-solid fa-address-book fa-fade"></i>Follow me on:</h3>
+        <div id="accounts-icons">
+            <a href="https://github.com/mirzajawad2026"><i class="fa-brands fa-square-github fa-fade"></i></a>
+            <a href="https://instgram.com/bmw_silent_king"><i class="fa-brands fa-instagram fa-fade"></i></a>
+            <a href="https://www.linkedin.com/in/mirza-jawad-4ba1a33b2/"><i class="fa-brands fa-linkedin fa-fade"></i></a>
+            <a href="https://www.youtube.com/@MirzaJawad-k5i"><i class="fa-brands fa-youtube fa-fade"></i></a>
+        </div>
+
+
+</section>
+</div>
+
+
+
+<!-- Footer section -->
+<section class="footer-section reveal">
+<div class="left-foot">© 2026 All rights reserved.</div>
+<div class="right-foot">Made by Mirza Jawad.</div>
+</section>
+
+
+
+
 
     <div class="mouseover">
         <div id="abcd"></div>
 
     </div>
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   emailjs.init("YOUR_PUBLIC_KEY");
 </script>
